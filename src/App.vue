@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header />
+  <div id="content" class="content">
+    <router-view></router-view> 
+  </div>
   </div>
 </template>
-
+ 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/layout/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header, //사용하려면, 여기 안에 header를 넣어줘야 사용할 수 있다.
   }
 }
 </script>
